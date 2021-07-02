@@ -1,0 +1,122 @@
+@import "../../containers/App/_mixins.scss";
+@import "../../containers/App/_variables.scss";
+
+.footer {
+  margin:0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction:row;
+  justify-content:space-between;
+  align-content: baseline;
+  margin-block-start: 6rem;
+
+  @include breakpoint-down(medium){
+    height:auto;
+    flex-direction:column;
+    align-content:space-around;
+  }
+
+  &_logo_footer{
+    @include breakpoint-up(large){
+      margin-inline-start: 3rem;
+      margin-block-start: -1rem;
+    }
+    order: 1;
+    display: flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    @include breakpoint-up(large){
+      margin-inline-start: 10rem;
+    }
+    img {
+      align-self: center;
+      width:auto;
+      height: 72px;
+      @include breakpoint-up(large){
+        margin-block-end: 1rem;
+        align-self: flex-start;
+
+      }
+      @include breakpoint-down(medium){
+        align-self: center;
+        margin-block-end: 2rem;
+      }
+    }
+    p{
+      @include breakpoint-up(large){
+        text-align: justify;
+      }
+      width: 32.5rem;
+      height: 2.25rem;
+      //margin-inline-start: -2rem;
+      font-family: $font-family;
+      font-size: 0.95rem;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.29;
+      letter-spacing: normal;
+      color: #595f6f;
+      @include breakpoint-down(medium){
+        margin: 0 auto;
+        align-self: center;
+        font-size: 0.7rem;
+        text-align: center;
+        width: 25.5rem;
+      }
+
+    }
+  }
+  &_social-icons{
+    @include breakpoint-up(large){
+      margin-inline-end: 9rem;
+    }
+    order: 2;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    h4{
+      font-family: Roboto;
+      font-size: 1rem;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: -0.44px;
+      color: #000000;
+      @include breakpoint-up(large){
+        width:18.563rem;
+        height:2.625rem;
+      }
+      @include breakpoint-down(medium){
+        font-size:0.8rem ;
+        width:17.3rem;
+        height:2.625rem;
+        text-align: center;
+      }
+
+    }
+
+    @include breakpoint-down(medium){
+      align-items: center;
+      margin-block-start: 2.2rem;
+      align-content: center;
+    }
+    &_grid{
+      @include breakpoint-up(larg){
+        margin-inline: 5.3rem;
+
+      }
+      display:flex;
+      flex-direction:row;
+      background-color: $btn_background;
+      img{
+        width: 40px;
+        height: 40px;
+        margin: 0 10px 0 0;
+        object-fit: contain;
+      }
+    }
+  }
+}

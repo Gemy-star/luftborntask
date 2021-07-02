@@ -1,0 +1,23 @@
+@import "./_variables.scss";
+@import './_mixins.scss';
+@import "../Home/_home.scss";
+@import "../../components/Header/_header.scss";
+@import "../../components/Footer/_footer.scss";
+
+
+.car-container{
+  width: 100%;
+  height:   auto;
+  margin: 0 auto;
+  padding: 0;
+  @include breakpoint-down(medium){
+    height: auto;
+  }
+  @include breakpoint-down(small){
+    height: auto !important;
+  }
+
+}
+body {
+  font-family: $font-family !important;
+}

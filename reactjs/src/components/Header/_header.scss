@@ -1,0 +1,68 @@
+@import "../../containers/App/_mixins.scss";
+@import "../../containers/App/_variables.scss";
+header {
+
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 14vh;
+  @include breakpoint-down(small){
+    width: 100%;
+    height: 13vh;
+  }
+}
+.header{
+  &_container {
+    display: flex;
+    flex-direction:row;
+    padding:0;
+    margin: 0 auto;
+    justify-content:space-between;
+    text-align:center;
+
+  }
+  &_btn{
+    text-decoration: none;
+    width: 6.75rem;
+    height:3rem;
+    border-radius:0.313rem;
+    cursor: pointer;
+    border: none;
+    background-color: $btn_background;
+    margin: 3.375rem 7.375rem;
+    text-align: -webkit-center;
+    line-height: 65px;
+    box-shadow:0 16px 40px rgba(0,0,0,0.12);border:0;;
+    @include breakpoint-down(small){
+      width: 4.8125rem;
+      height: 2.25rem;
+      margin:3.9rem 4.9rem;
+    }
+    &:hover{
+      background-color: $btn_background;
+    }
+    p{
+      margin: 0.2rem;
+      width: 48px;
+      height: 16px ;
+      font-family: $font-family;
+      @extend .txt
+    }
+  }
+  &_logo {
+
+    img {
+      cursor: pointer;
+      width: 9.8125rem;
+      height: 6.375rem;
+      margin: 1.175rem 6.375rem;
+
+      @include breakpoint-down(small){
+        width: 9.8125rem;
+        height: 8.375rem;
+        margin: 0.5rem 1.9rem;;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,134 @@
+@import "../../Containers/App/_mixins.scss";
+@import "../../Containers/App/_variables.scss";
+
+.service_card:hover{
+
+    box-shadow: 0px 4px 4px 0px $btn_background;
+
+}
+.service_card {
+  display: flex;
+  width: auto;
+  height: auto;
+  margin: 0 0 5rem 2rem;
+  border-radius: 50px;
+  border: solid 1px $btn_background;
+  background-color: #ffffff;
+  justify-content: space-around;
+  box-shadow: 0 4px 4px 0 $btn_background, 0 4px 4px 0 $btn_background;
+  @include breakpoint-down(medium){
+    width:auto;
+    height:auto;
+    margin: 0 auto;
+    margin-top: 1.8rem;
+  }
+
+  &_item{
+    display: flex;
+    align-self: center;
+    width:50%;
+    @include breakpoint-up(large){
+      margin-inline-start: -4rem;
+    }
+    @include breakpoint-down(medium){
+      width:100%;
+      flex-direction:column;
+      align-items:center;
+      order: 1;
+      align-content: center;
+      margin-block-start: 1.5rem;
+    }
+
+    &_img{
+
+      width: 40px;
+      height: 50px;
+
+      @include breakpoint-up(large){
+        margin-block-start: 3rem;
+      }
+      @include breakpoint-down(medium){
+        margin-block-start: 3rem;
+        margin: 0 auto;
+      }
+    }
+    &_content{
+      align-self: center;
+      display: flex;
+      align-items:center;
+      flex-direction:column;
+      @include breakpoint-up(large){
+        margin-inline-start: 1.8rem;
+      }
+      h3{
+        margin-inline: 0.7rem;
+        display: flex;
+        margin-top: 1rem;
+        align-self: flex-start;
+        width: 11.25rem;
+        height:1.5rem;
+        font-family: $font-family;
+        font-size: 18px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: -0.5px;
+        color: #595f6f;
+        text-align: center;
+        @include breakpoint-down(medium){
+          width:10.438rem;
+          align-self: center;
+          justify-content: center;
+        }
+      }
+      p{
+        @include breakpoint-down(medium){
+          text-align:center;
+          align-self: flex-start;
+          justify-content: center;
+
+        }
+        display: flex;
+        align-self: flex-start;
+        margin-top: 0.4rem;
+        width: 180px;
+        height: 5.26rem;
+        font-family: $font-family;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.29;
+        letter-spacing: normal;
+        color: #595f6f;
+        @include breakpoint-down(medium){
+          width:21.375rem;
+        }
+
+      }
+    }
+  }
+  &_control {
+    display: flex;
+    width: auto;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    &_edit{
+      order:1;
+      font-size: x-large;
+      color: $btn_background;
+      cursor: pointer;
+    }
+    &_delete{
+      order: 2;
+      font-size: x-large;
+      color: $btn_background;
+      cursor: pointer;
+
+
+    }
+
+  }
+}
